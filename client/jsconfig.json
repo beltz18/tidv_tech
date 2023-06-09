@@ -2,8 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
-      "@s/": ["./styles/"],
-      "@a/": ["./app/"]
+      "@s/*": ["./styles/*"],
+      "@c/*": ["./app/components/*"],
+      "@p/*": ["./app/sections/*"],
     }
   }
 }
