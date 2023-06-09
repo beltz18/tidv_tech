@@ -5,6 +5,7 @@ import Button from '@c/Button'
 
 const Navbar = ({ link }) => {
   const sectionLinks = [
+    { name: 'Home',       link: '/'           },
     { name: 'About',      link: '#about'      },
     { name: 'Experience', link: '#experience' },
     { name: 'Work',       link: '#work'       },
