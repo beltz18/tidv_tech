@@ -1,0 +1,42 @@
+.hero {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: center;
+  min-height: 60vh;
+  &-title {
+    color: var(--theme-color);
+    font-size: 20px;
+    font-family: var(--fira-code);
+  }
+  &-title-large {
+    color: var(--light-slate);
+    font-size: 50px;
+    font-family: var(--raleway);
+  }
+  &-title-sub {
+    text-decoration: underline;
+    font-size: 30px;
+    color: var(--lightest-slate);
+  }
+  &-text {
+    color: var(--slate);
+    margin-right: 40%;
+    font-size: 18px;
+    letter-spacing: .07rem;
+    text-align: justify;
+    line-height: 1.6rem;
+    font-weight: 600;
+    font-family: var(--raleway);
+  }
+  &-button {
+    margin-top: 2rem;
+    .btn {
+      padding: 1rem 2rem;
+      font-size: 18px;
+      font-family: var(--fira-code);
+    }
+  }
+}

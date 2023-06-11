@@ -7,6 +7,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     transition: 0.3s ease-in-out;
+    border-bottom: 1px solid var(--slate);
     .brand {
       a {
         transition: 0.3s ease-in-out;

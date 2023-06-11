@@ -4,10 +4,14 @@
   left: 4rem;
   padding-top: 10px;
   background-color: var(--lightest-slate);
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 5px;
   &-list {
-    height: 250px;
+    height: 350px;
     list-style-type: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: .5rem;
     &-item {
@@ -39,6 +43,6 @@
     border-right: 25px solid transparent;
     border-top: 25px solid transparent;
     border-left: 25px solid transparent;
-    border-bottom: 25px solid var(--light-navy);
+    border-bottom: 25px solid var(--background-color);
   }
 }
