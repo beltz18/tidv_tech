@@ -31,6 +31,15 @@ nav {
         display: flex;
         gap: 3rem;
         list-style-type: none;
+        &-home {
+          a {
+            transition: 0.3s ease-in-out;
+            color: inherit;
+            text-decoration: none;
+            color: var(--lightest-slate);
+            &:hover { color: var(--theme-color); }
+          }
+        }
         &-item {
           a {
             transition: 0.3s ease-in-out;

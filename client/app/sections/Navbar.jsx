@@ -5,7 +5,6 @@ import Button from '@c/Button'
 
 const Navbar = ({ link }) => {
   const sectionLinks = [
-    { name: 'Home',       link: '/'           },
     { name: 'About',      link: '#about'      },
     { name: 'Experience', link: '#experience' },
     { name: 'Work',       link: '#work'       },
@@ -22,6 +21,9 @@ const Navbar = ({ link }) => {
         </div>
         <div className="nav-items">
           <ul className="nav-items-list">
+            <li key='Home' className='nav-items-list-home'>
+              <Link href='/'>Home</Link>
+            </li>
             {
               sectionLinks.map(({name, link}) => (
                 <li key={name} className='nav-items-list-item'>
