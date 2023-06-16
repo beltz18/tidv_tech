@@ -88,7 +88,7 @@ const Experience = () => {
           {
             expereinces.map((expereince,index) => {
               return (
-                <li>
+                <li key={expereince.name}>
                   <span>{expereince.name}</span>
                 </li>
               )
