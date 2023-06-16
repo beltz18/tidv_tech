@@ -2,20 +2,20 @@ import React from 'react'
 
 const About = () => {
   const technologies = [
-    { name: 'Reactjs',    icon: <i class='bx bxl-react'></i> },
-    { name: 'Nodejs',     icon: <i class='bx bxl-nodejs'></i> },
-    { name: 'JavaScript', icon: <i class='bx bxl-javascript'></i> },
-    { name: 'TypeScript', icon: <i class='bx bxl-typescript'></i> },
-    { name: 'Flask',      icon: <i class='bx bxl-flask'></i> },
-    { name: 'Django',     icon: <i class='bx bxl-django'></i> },
-    { name: 'Python',     icon: <i class='bx bxl-python'></i> },
-    { name: 'HTML',       icon: <i class='bx bxl-html5'></i> },
-    { name: 'CSS',        icon: <i class='bx bxl-css3'></i> },
-    { name: 'Sass',       icon: <i class='bx bxl-sass'></i> },
-    { name: 'SQL',        icon: <i class='bx bxl-postgresql'></i> },
-    { name: 'MongoDB',    icon: <i class='bx bxl-mongodb'></i> },
-    { name: 'Git/GitHub', icon: <i class='bx bxl-github'></i> },
-    { name: 'Docker',     icon: <i class='bx bxl-docker'></i> },
+    { name: 'Reactjs',    icon: <i className='bx bxl-react'></i> },
+    { name: 'Nodejs',     icon: <i className='bx bxl-nodejs'></i> },
+    { name: 'JavaScript', icon: <i className='bx bxl-javascript'></i> },
+    { name: 'TypeScript', icon: <i className='bx bxl-typescript'></i> },
+    { name: 'Flask',      icon: <i className='bx bxl-flask'></i> },
+    { name: 'Django',     icon: <i className='bx bxl-django'></i> },
+    { name: 'Python',     icon: <i className='bx bxl-python'></i> },
+    { name: 'HTML',       icon: <i className='bx bxl-html5'></i> },
+    { name: 'CSS',        icon: <i className='bx bxl-css3'></i> },
+    { name: 'Sass',       icon: <i className='bx bxl-sass'></i> },
+    { name: 'SQL',        icon: <i className='bx bxl-postgresql'></i> },
+    { name: 'MongoDB',    icon: <i className='bx bxl-mongodb'></i> },
+    { name: 'Git/GitHub', icon: <i className='bx bxl-github'></i> },
+    { name: 'Docker',     icon: <i className='bx bxl-docker'></i> },
   ]
 
   return (

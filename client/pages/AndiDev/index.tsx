@@ -2,6 +2,7 @@ import React       from 'react'
 import Navbar      from '@p/Navbar'
 import Hero        from '@p/Hero'
 import About       from '@p/About'
+import Experience  from '@p/Experience'
 import SocialIcons from '@c/SocialIcons'
 import Email       from '@c/Email'
 
@@ -14,6 +15,7 @@ const Andi = () => {
       <main>
         <Hero />
         <About />
+        <Experience />
       </main>
     </div>
   )

@@ -19,9 +19,7 @@
     cursor: pointer;
     z-index: 1;
     position: absolute;
-    &:hover {
-      animation: humo 3s linear infinite;
-    }
+    animation: humo 3s linear infinite;
   }
   &-logo2 {
     width: 300px;
