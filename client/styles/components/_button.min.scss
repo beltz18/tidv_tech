@@ -9,5 +9,6 @@
   outline: none;
   &:hover, &:focus {
     background-color: var(--lightest-navy);
+    color: var(--light-slate);
   }
 }

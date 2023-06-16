@@ -1,5 +1,6 @@
 import React  from 'react'
-import Button from '../components/Button'
+import Button from '@c/Button'
+import Link   from 'next/link'
 
 const Hero = () => {
   return (
@@ -24,8 +25,10 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-two">
-        <img src="/andi-dev-logo.png" alt="logo Andi Dev" className='hero-logo logo' />
-        <img src="/andi-dev-logo.png" alt="logo Andi Dev" className='hero-logo2 logo' />
+        <Link href="https://youtube.com/@AndiDev18" target='_blank'>
+          <img src="/andi-dev-logo.png" alt="logo Andi Dev" className='hero-logo logo' />
+          <img src="/andi-dev-logo.png" alt="logo Andi Dev" className='hero-logo2 logo' />
+        </Link>
       </div>
     </div>
   )

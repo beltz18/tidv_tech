@@ -1,15 +1,21 @@
-import React     from 'react'
+import React from 'react'
 
 const About = () => {
   const technologies = [
-    { name: '', icon: '' },
-    { name: '', icon: '' },
-    { name: '', icon: '' },
-    { name: '', icon: '' },
-    { name: '', icon: '' },
-    { name: '', icon: '' },
-    { name: '', icon: '' },
-    { name: '', icon: '' },
+    { name: 'Reactjs',    icon: <i class='bx bxl-react'></i> },
+    { name: 'Nodejs',     icon: <i class='bx bxl-nodejs'></i> },
+    { name: 'JavaScript', icon: <i class='bx bxl-javascript'></i> },
+    { name: 'TypeScript', icon: <i class='bx bxl-typescript'></i> },
+    { name: 'Flask',      icon: <i class='bx bxl-flask'></i> },
+    { name: 'Django',     icon: <i class='bx bxl-django'></i> },
+    { name: 'Python',     icon: <i class='bx bxl-python'></i> },
+    { name: 'HTML',       icon: <i class='bx bxl-html5'></i> },
+    { name: 'CSS',        icon: <i class='bx bxl-css3'></i> },
+    { name: 'Sass',       icon: <i class='bx bxl-sass'></i> },
+    { name: 'SQL',        icon: <i class='bx bxl-postgresql'></i> },
+    { name: 'MongoDB',    icon: <i class='bx bxl-mongodb'></i> },
+    { name: 'Git/GitHub', icon: <i class='bx bxl-github'></i> },
+    { name: 'Docker',     icon: <i class='bx bxl-docker'></i> },
   ]
 
   return (
@@ -21,7 +27,7 @@ const About = () => {
         <div className="about-grid-info">
           <p className="about-grid-info-text">
             Let me introduce myself: I am Andi Montilla, a Full Stack
-            developer with 4+ years of experience, and I would like to
+            developer with +4 years of experience, and I would like to
             offer you my skills. I have worked on various applications
             and projects over the past few years, and I am proud to say
             that I have gained extensive experience in web, mobile
@@ -52,8 +58,24 @@ const About = () => {
             Some technologies i have working in:  
           </p>
           <ul className="about-grid-info-list">
-            <li></li>
+            {
+              technologies.map(({name,icon}) => (
+                <li className='about-grid-info-list-item'>
+                  {icon}
+                  &nbsp;
+                  {name}
+                </li>
+              ))
+            }
           </ul>
+        </div>
+        <div className="about-grid-photo">
+          <div className="about-grid-photo-container">
+            <img src="/AndiDev.png" alt='profile' />
+          </div>
+          <div className="about-grid-photo-container">
+            <img src="/Andi.png"    alt='profile' />
+          </div>
         </div>
       </div>
     </div>

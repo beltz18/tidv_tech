@@ -13,6 +13,7 @@ const Andi = () => {
       <Email email="anmdev32@gmail.com" />
       <main>
         <Hero />
+        <About />
       </main>
     </div>
   )
