@@ -60,7 +60,7 @@ const About = () => {
           <ul className="about-grid-info-list">
             {
               technologies.map(({name,icon}) => (
-                <li className='about-grid-info-list-item'>
+                <li className='about-grid-info-list-item' key={name}>
                   {icon}
                   &nbsp;
                   {name}
