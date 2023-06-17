@@ -1,7 +1,21 @@
-import React from 'react'
+import Link from 'next/link'
+import React, {
+  useState,
+  useEffect
+} from 'react'
 
 const Experience = () => {
-  const expereinces = [
+  const [selected, setSelected] = useState(0)
+
+  useEffect(() => {
+    const transformSelected = () => {
+      const underline = document.querySelector<HTMLElement>(".underline")
+      underline!.style.top = `${selected * 4}rem`
+    }
+    transformSelected()
+  }, [selected])
+
+  const experiences = [
     {
       name: "YouTube",
       role: "Content Creator",
@@ -31,14 +45,14 @@ const Experience = () => {
         "Develop microservices based on Nodejs / Flask to connect with Google Cloud and storing data related to the operation of the internal processes of the company.",
       ],
       accomplishments: [
-        "Improved my team&apos;s efficiency by reducing the learning curve from 12 months to 7 months by promoting the use of XP practices, pair and group programming. Full Stack principles and an experimentation mindset.",
+        "Improved my team's efficiency by reducing the learning curve from 12 months to 7 months by promoting the use of XP practices, pair and group programming. Full Stack principles and an experimentation mindset.",
         "Built a progressive web application (PWA) on Nextjs and Ractjs as front-end, Nodejs and Flask as back-end and MongoDB as database using agile methodology and SCRUM principles and values.",
         "The team scaled their knowledge by expanding their technological horizons from PHP, Wordpress and Elementor to MERN Stack, Nextjs and Flask with reactive design patterns.",
       ]
     },
     {
       name: "TIDV Tech",
-      role: "Founder",
+      role: "Founder / Team Lead Developer",
       url: "https://tidv.tech",
       start: "January, 2021",
       end: "April, 2023",
@@ -51,13 +65,13 @@ const Experience = () => {
       ],
       accomplishments: [
         "The knowledge of 150 students of the computer science career was increased where they learned the use of current and on-demand technologies such as Nodejs, Reactjs, Git, Docker and others.",
-        "Increased my team&apos;s engagement by creating a psychologically-safe environment and a continuous, transparent feedback culture.",
+        "Increased my team's engagement by creating a psychologically-safe environment and a continuous, transparent feedback culture.",
         "The knowledge of my team in new technologies, good practices and programming principles with clean and scalable code was improved.",
         "Built a progressive web application (PWA) on Nextjs as front-end, Flask as back-end and MongoDB as database using agile methodology and SCRUM principles and values.",
       ]
     },
     {
-      name: "Tachira&apos;s University Institute (IUT)",
+      name: "Tachira's University Institute (IUT)",
       role: "Full Stack Developer / University Professor",
       url: "https://uptaivirtualsarec.com",
       start: "March, 2019",
@@ -86,15 +100,43 @@ const Experience = () => {
         <ul className="exp-slider">
           <div className="underline"></div>
           {
-            expereinces.map((expereince,index) => {
+            experiences.map((expereince,index) => {
               return (
-                <li key={expereince.name}>
+                <li key={index} className={`exp-slider-item ${index === selected && "exp-slider-item-selected"} `} onClick={() => setSelected(index)}>
                   <span>{expereince.name}</span>
                 </li>
               )
             })
           }
         </ul>
+        <div className="exp-details">
+          <div className="exp-details-position">
+            <h3>
+              <span>{experiences[selected].role}</span>
+              <span className='exp-details-postion-company'>
+                &nbsp;&nbsp; at &nbsp;&nbsp;
+                <Link className='link' href={experiences[selected].url} target='_blank'>
+                  {experiences[selected].name}{" "}
+                </Link>
+              </span>
+            </h3>
+            <p className="exp-details-range">
+              [ {experiences[selected].start} - {experiences[selected].end} ]
+            </p>
+            <h3 className='title-sep'>Responsibilities</h3>
+            <ul className="exp-details-list">
+              {
+                experiences[selected].responsibilities.map((resp,index) => (<li key={index} className='exp-details-list-item'>{resp}</li>))
+              }
+            </ul>
+            <h3 className='title-sep'>Key Accomplishments</h3>
+            <ul className="exp-details-list">
+              {
+                experiences[selected].accomplishments.map((accomp,index) => (<li key={index} className='exp-details-list-item'>{accomp}</li>))
+              }
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   )
