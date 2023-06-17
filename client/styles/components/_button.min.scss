@@ -1,14 +1,1 @@
-.btn {
-  transition: 0.3s ease-in-out;
-  color: var(--theme-color);
-  padding: .75rem 1rem;
-  text-decoration: none;
-  background-color: transparent;
-  border: 1px solid var(--theme-color);
-  border-radius: 4px;
-  outline: none;
-  &:hover, &:focus {
-    background-color: var(--lightest-navy);
-    color: var(--light-slate);
-  }
-}
+.btn{transition:0.3s ease-in-out;color:var(--theme-color);padding:.75rem 1rem;text-decoration:none;background-color:transparent;border:1px solid var(--theme-color);border-radius:4px;outline:none;&:hover,&:focus{background-color:var(--lightest-navy);color:var(--light-slate)}}

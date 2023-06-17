@@ -73,9 +73,6 @@ const About = () => {
           <div className="about-grid-photo-container">
             <img src="/AndiDev.png" alt='profile' />
           </div>
-          <div className="about-grid-photo-container">
-            <img src="/Andi.png"    alt='profile' />
-          </div>
         </div>
       </div>
     </div>
