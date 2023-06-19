@@ -3,6 +3,7 @@ import Navbar      from '@p/Navbar'
 import Hero        from '@p/Hero'
 import About       from '@p/About'
 import Experience  from '@p/Experience'
+import Projects    from '@p/Projects'
 import SocialIcons from '@c/SocialIcons'
 import Email       from '@c/Email'
 
@@ -16,6 +17,7 @@ const Andi = () => {
         <Hero />
         <About />
         <Experience />
+        <Projects />
       </main>
     </div>
   )
