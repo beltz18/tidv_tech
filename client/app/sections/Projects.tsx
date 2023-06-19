@@ -108,18 +108,20 @@ const Projects = () => {
                     ))}
                   </ul>
                   <ul className="project-info-links">
-                    <li className="project-info-links-item">
+                    <li className="project-info-links-item" key={1}>
                       <Link
                         href={github}
                         className="project-info-links-item-link"
+                        target='_blank'
                       >
                         <FiGithub />
                       </Link>
                     </li>
-                    <li className="project-info-links-item">
+                    <li className="project-info-links-item" key={2}>
                       <Link
                         href={link}
                         className="project-info-links-item-link"
+                        target='_blank'
                       >
                         <FiExternalLink />
                       </Link>
