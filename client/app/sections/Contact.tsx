@@ -26,7 +26,7 @@ const Contact = () => {
         "I love Cats, do you too? (=^･ω･^=)",
         "Science is life",
         "I'm feelin' hungry",
-        "Wanna take a coffe?",
+        "Wanna take a coffee?",
         "AI will rule the world D:",
       ],
       typeSpeed: getRandomIntInclusive(15,40),

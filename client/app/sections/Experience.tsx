@@ -71,7 +71,7 @@ const Experience = () => {
       ]
     },
     {
-      name: "Tachira's University Institute (IUT)",
+      name: "Tachira's University Institute",
       role: "Full Stack Developer / University Professor",
       url: "https://uptaivirtualsarec.com",
       start: "March, 2019",
