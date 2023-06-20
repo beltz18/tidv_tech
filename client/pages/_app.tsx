@@ -2,7 +2,7 @@ import '@s/index.min.scss'
 import { AppProps } from 'next/app'
 import {
   Raleway,
-  Fira_Code
+  Fira_Code,
 } from 'next/font/google'
 
 const raleway  = Raleway({ subsets:['latin'] })
