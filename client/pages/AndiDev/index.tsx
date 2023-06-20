@@ -4,6 +4,7 @@ import Hero        from '@p/Hero'
 import About       from '@p/About'
 import Experience  from '@p/Experience'
 import Projects    from '@p/Projects'
+import Contact     from '@p/Contact'
 import SocialIcons from '@c/SocialIcons'
 import Email       from '@c/Email'
 
@@ -18,6 +19,7 @@ const Andi = () => {
         <About />
         <Experience />
         <Projects />
+        <Contact />
       </main>
     </div>
   )
