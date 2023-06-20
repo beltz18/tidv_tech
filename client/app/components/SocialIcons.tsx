@@ -1,11 +1,12 @@
-import React from 'react'
+import React      from 'react'
+import Link       from 'next/link'
+import { motion } from 'framer-motion'
 import {
   FiGithub,
   FiYoutube,
   FiLinkedin,
   FiTwitter
 } from 'react-icons/fi'
-import Link from 'next/link'
 
 const SocialIcons = () => {
   const icons = [
@@ -16,7 +17,16 @@ const SocialIcons = () => {
   ]
 
   return (
-    <div className='social-icons'>
+    <motion.div
+      className='social-icons'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: .3,
+        ease: "linear",
+        delay: 2,
+      }}
+    >
       <ul className='social-icons-list'>
         {
           icons.map(({name,icon,link,title}) => (
@@ -33,7 +43,7 @@ const SocialIcons = () => {
           ))
         }
       </ul>
-    </div>
+    </motion.div>
   )
 }
 

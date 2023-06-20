@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import Link       from 'next/link'
+import { motion } from 'framer-motion'
 import React, {
   useState,
   useEffect
@@ -92,7 +93,18 @@ const Experience = () => {
   ]
 
   return (
-    <div className='experience' id='experience'>
+    <motion.div
+      className='experience'
+      id='experience'
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: .6 }}
+      variants={{
+        visible: { opacity: 1, y: -50 },
+        hidden: { opacity: 0, y: 0 },
+      }}
+    >
       <div className="title">
         <h2>Where I&apos;ve Worked</h2>
       </div>
@@ -102,7 +114,11 @@ const Experience = () => {
           {
             experiences.map((expereince,index) => {
               return (
-                <li key={index} className={`exp-slider-item ${index === selected && "exp-slider-item-selected"} `} onClick={() => setSelected(index)}>
+                <li
+                  key={index}
+                  className={`exp-slider-item ${index === selected && "exp-slider-item-selected"} `}
+                  onClick={() => setSelected(index)}
+                >
                   <span>{expereince.name}</span>
                 </li>
               )
@@ -123,22 +139,76 @@ const Experience = () => {
             <p className="exp-details-range">
               [ {experiences[selected].start} - {experiences[selected].end} ]
             </p>
-            <h3 className='title-sep'>Responsibilities</h3>
+            <motion.h3
+              className='title-sep'
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: .6 }}
+              variants={{
+                visible: { opacity: 1, y: -2 },
+                hidden: { opacity: 0, y: 0 },
+              }}
+            >
+              Responsibilities
+            </motion.h3>
             <ul className="exp-details-list">
               {
-                experiences[selected].responsibilities.map((resp,index) => (<li key={index} className='exp-details-list-item'>{resp}</li>))
+                experiences[selected].responsibilities.map((resp,index) => (
+                  <motion.li
+                    key={index}
+                    className='exp-details-list-item'
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: .3 + index * .2 }}
+                    variants={{
+                      visible: { opacity: 1, y: -2 },
+                      hidden: { opacity: 0, y: 0 },
+                    }}
+                  >
+                    {resp}
+                  </motion.li>
+                ))
               }
             </ul>
-            <h3 className='title-sep'>Key Accomplishments</h3>
+            <motion.h3
+              className='title-sep'
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: .6 }}
+              variants={{
+                visible: { opacity: 1, y: -2 },
+                hidden: { opacity: 0, y: 0 },
+              }}
+            >
+              Key Accomplisments
+            </motion.h3>
             <ul className="exp-details-list">
               {
-                experiences[selected].accomplishments.map((accomp,index) => (<li key={index} className='exp-details-list-item'>{accomp}</li>))
+                experiences[selected].accomplishments.map((accomp,index) => (
+                  <motion.li
+                    key={index}
+                    className='exp-details-list-item'
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: .3 + index * .2 }}
+                    variants={{
+                      visible: { opacity: 1, y: -2 },
+                      hidden: { opacity: 0, y: 0 },
+                    }}
+                  >
+                    {accomp}
+                  </motion.li>
+                ))
               }
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

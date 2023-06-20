@@ -1,4 +1,5 @@
-import React from 'react'
+import React      from 'react'
+import { motion } from 'framer-motion'
 
 const About = () => {
   const technologies = [
@@ -19,7 +20,18 @@ const About = () => {
   ]
 
   return (
-    <div className='about' id='about'>
+    <motion.div
+      className='about'
+      id='about'
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: .6 }}
+      variants={{
+        visible: { opacity: 1, y: -50 },
+        hidden: { opacity: 0, y: 0 },
+      }}
+    >
       <div className="title">
         <h2>About me</h2>
       </div>
@@ -57,7 +69,17 @@ const About = () => {
           <p className="about-grid-info-text">
             Some technologies i have working in:  
           </p>
-          <ul className="about-grid-info-list">
+          <motion.ul
+            className="about-grid-info-list"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: .6 }}
+            variants={{
+              visible: { opacity: 1, y: -2 },
+              hidden: { opacity: 0, y: 0 },
+            }}
+          >
             {
               technologies.map(({name,icon}) => (
                 <li className='about-grid-info-list-item' key={name}>
@@ -67,15 +89,25 @@ const About = () => {
                 </li>
               ))
             }
-          </ul>
+          </motion.ul>
         </div>
-        <div className="about-grid-photo">
+        <motion.div
+          className="about-grid-photo"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: .6 }}
+          variants={{
+            visible: { opacity: 1, y: -2 },
+            hidden: { opacity: 0, y: 0 },
+          }}
+        >
           <div className="about-grid-photo-container">
             <img src="/AndiDev.png" alt='profile' />
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

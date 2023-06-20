@@ -1,7 +1,8 @@
-import React  from 'react'
-import Link   from 'next/link'
-import Logo   from '@c/Logo'
-import Button from '@c/Button'
+import React      from 'react'
+import Link       from 'next/link'
+import { motion } from 'framer-motion'
+import Logo       from '@c/Logo'
+import Button     from '@c/Button'
 import {
   GiHamburgerMenu
 } from 'react-icons/gi'
@@ -41,12 +42,28 @@ const Navbar = ({ link }) => {
   return (
     <nav>
       <div className={`wrapper ${navbarVisible ? "blur-nav" : ""}`}>
-        <div className="brand">
+        <motion.div
+          className="brand"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: .3,
+            ease: "circInOut"
+          }}
+        >
           <Link href={link} target='_blank'>
             <Logo i={2} />
           </Link>
-        </div>
-        <div className="nav-responsive-toggle">
+        </motion.div>
+        <motion.div
+          className="nav-responsive-toggle"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: .3,
+            ease: "circInOut"
+          }}
+        >
           {
             responsiveNavbar ? (
               <CgClose
@@ -64,23 +81,42 @@ const Navbar = ({ link }) => {
               />
             )
           }
-        </div>
+        </motion.div>
         <div className={`${responsiveNavbar && "nav-responsive"} nav-items`}>
           <ul className="nav-items-list">
             <li key='Home' className='nav-items-list-home'>
               <Link href='/'>Home</Link>
             </li>
             {
-              sectionLinks.map(({name, link}) => (
-                <li key={name} className='nav-items-list-item'>
+              sectionLinks.map(({name, link}, index) => (
+                <motion.li
+                  key={name}
+                  className='nav-items-list-item'
+                  initial={{ opacity: 0, y: -25 }}
+                  animate={{ opacity: 1, y: 0   }}
+                  transition={{
+                    duration: .3,
+                    ease: 'easeInOut',
+                    delay: .3 + index * .1,
+                  }}
+                >
                   <Link href={link} className='nav-items-list-item-link'>{name}</Link>
-                </li>
+                </motion.li>
               ))
             }
           </ul>
-          <div className="nav-items-button">
+          <motion.div
+            className="nav-items-button"
+            initial={{ opacity: 0, y: -25 }}
+            animate={{ opacity: 1, y: 0   }}
+            transition={{
+              duration: .3,
+              ease: 'easeInOut',
+              delay: .6,
+            }}
+          >
             <Button text='Resume' link='/assets/resume/resume_andi_en.pdf' />
-          </div>
+          </motion.div>
         </div>
       </div>
     </nav>
