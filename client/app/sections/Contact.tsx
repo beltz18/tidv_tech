@@ -30,8 +30,8 @@ const Contact = () => {
         "Wanna take a coffee?",
         "AI will rule the world D:",
       ],
-      typeSpeed: getRandomIntInclusive(15,40),
-      backSpeed: getRandomIntInclusive(15,40),
+      typeSpeed: 50,
+      backSpeed: 50,
       backDelay: 600,
       startDelay: 300,
       loop: true,
@@ -89,10 +89,10 @@ const Contact = () => {
             hidden: { opacity: 0, y: 0 },
           }}
         >
-          I always appreciate for a kind message with warm people.
-          If you want to talk about tech, ask for a tip, needs an
-          advise, offer me a job or just hang out for a while. I
-          will try my best to get back to you and chat!
+          I always appreciate a kind message from warm people.
+          If you want to talk about tech, ask for a tip, needs advice,
+          offer me a job, or hang out for a while. I will try my best
+          to get back to you and chat!
         </motion.p>
         <motion.div
           className="contact-cta"
