@@ -38,36 +38,34 @@ const About = () => {
       <div className="about-grid">
         <div className="about-grid-info">
           <p className="about-grid-info-text">
-            Let me introduce myself: I am Andi Montilla, a Full Stack
-            developer with +4 years of experience, and I would like to
-            offer you my skills. I have worked on various applications
-            and projects over the past few years, and I am proud to say
-            that I have gained extensive experience in web, mobile
-            development and programming.
+            Let me introduce myself: My name is Andi Montilla, a Full Stack
+            developer with +4 years of experience, it&apos;s a pleasure for me to
+            offer you my skills. I have worked on various applications and
+            projects over the past few years, I&apos;m proud to say that my
+            experience is extensive in web and mobile development.
           </p>
           <p className="about-grid-info-text">
-            I am passionate about the creative process of app development,
-            and enjoy working as a team to deliver high-quality projects.
-            I have advanced skills in programming languages such as Python
-            and JavaScript, as well as extensive experience in relational,
-            non-relational databases, and user interface development tools.
-            Also, I am familiar with version control tools like Git.
+            Very passionate about the creative process of app development and enjoy
+            working in a team to deliver high-quality projects. I have advanced skills
+            in programming languages such as Python and JavaScript, as well as extensive
+            experience in relational and non-relational databases, additionally user
+            interface development kits. Also, familiar with version control tools like
+            Git and Bitbucket.
           </p>
           <p className="about-grid-info-text">
-            I have worked on projects of variable size, from small
-            applications to much larger projects, where I have collaborated
-            with multidisciplinary teams and lead small teams. I have
-            demonstrated analytical skills that allow me to understand and
-            solve complex problems using technology effectively.
+            I have worked on projects of variable size, from small applications to much
+            larger projects, collaborating and leading small and multidisciplinary teams,
+            Demonstrating analytical skills that allow me to understand and solve complex
+            problems using technology effectively.
           </p>
           <p className="about-grid-info-text">
-            I am confident that I can bring my skills, knowledge and passion
-            for technology to you. If you are interested in my profile, I will
-            be happy to provide you with more information about my skills and
-            previous work. Get in touch with me via email or Twitter.
+            Very confident that I can bring my skills, knowledge, and passion for technology
+            to you. If you are interested in my profile, I&apos;d be happy to provide more
+            information about my skills and previous work. Get in touch with me via email
+            or Twitter.
           </p>
           <p className="about-grid-info-text">
-            Some technologies i have working in:  
+            Some technologies I have worked in:  
           </p>
           <motion.ul
             className="about-grid-info-list"

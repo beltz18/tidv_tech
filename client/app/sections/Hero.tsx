@@ -53,12 +53,12 @@ const Hero = () => {
             delay: 1.25,
           }}
         >
-          +4 years experience as a Full Stack Developer with strong
-          understanding of both front-end and back-end development.
-          Proven ability to develop and deliver high-quality web
-          applications using a variety of technologies. I&apos;ve collaborated
-          with multidisciplinary teams and led small teams (5 - 10 developers).
-          Excellent problem-solving and debugging skills.
+          +4 years experience as a Full Stack Developer with a high
+          understanding of front-end and back-end development. Proven
+          ability to develop and deliver high-quality web applications
+          using cutting-edge technologies. I&apos;ve collaborated with and
+          led multidisciplinary and small teams (5 - 10 developers).
+          Proficient in problem-solving and debugging skills.
         </motion.p>
         <motion.div
           className="hero-button"
